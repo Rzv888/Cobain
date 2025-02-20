@@ -24,12 +24,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: ~/.npm
-          registry-url: https://npm.pkg.github.com/
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm ci
-      - run: npm config set registry https://npm.pkg.github.com/
       - run: npm test
 
   publish-gpr:
@@ -54,4 +52,5 @@ jobs:
       - run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
