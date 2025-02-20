@@ -51,7 +51,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - run: npm ci
-      - run: npm logout
+      - run: npm login --registry=https://npm.pkg.github.com/ -u ${{ secrets.GITHUB_USERNAME }} -p ${{ secrets.NODE_AUTH_TOKEN }} -e your-email@example.com
       - run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
