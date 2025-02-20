@@ -27,5 +27,8 @@
   },
   "jest": {
     "testEnvironment": "jsdom"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
