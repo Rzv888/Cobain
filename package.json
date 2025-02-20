@@ -1,0 +1,31 @@
+{
+  "name": "sistem-rekrutmen-asisten",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "build:css": "tailwindcss -i public/styles/input.css -o public/styles/output.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "sistem-rekrutmen-asisten": "file:"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "tailwindcss": "^3.4.15"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  }
+}
